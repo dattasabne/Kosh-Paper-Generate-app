@@ -1,0 +1,154 @@
+<div class="main-div form-background">
+  <div class="row full-height">
+      <div class="col-12 full-height">
+        <mat-tab-group class="full-height" [dynamicHeight]="false">
+          <mat-tab label="Upload Papers" class="full-height">
+            <div style="padding: 10px 0px !important;" class="row">
+             <div class="col-3 full-height">
+                  <mat-card class="stepper select-fields full-width">
+                    <div class="each-step full-width">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Pattern Name</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option value="option1">JEE</mat-option>
+                          <mat-option value="option2">NEET</mat-option>
+                          <mat-option value="option3">JEE/ADVANCE</mat-option>
+                          <mat-option value="option3">MH/CET</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Subject Name</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option value="option1">Physics</mat-option>
+                          <mat-option value="option2">Chemistry</mat-option>
+                          <mat-option value="option1">Mathematics</mat-option>
+                          <mat-option value="option2">PCM</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Standard Name</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option value="option1">11th</mat-option>
+                          <mat-option value="option2">12th</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                          <mat-label>Chapter Name</mat-label>
+                          <mat-select [(value)]="selected">
+                            <mat-option value="option1">Chapter1</mat-option>
+                            <mat-option value="option2">Chapter2</mat-option>
+                            <mat-option value="option3">Chapter3</mat-option>
+                            <mat-option value="option3">Chapter4</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                    </div>
+                </mat-card>
+              </div>
+              <div class="col-9 custom-height">
+                <mat-card class="record-container">
+                    <div class="full" *ngFor="let header of allHeaders">
+                        <div class="record">
+                            <div class="field header" >
+                                <mat-checkbox class="checkbox" color="primary"></mat-checkbox>
+                            </div>
+                            <div class="field header">{{header.questionNo}}</div>
+                            <div class="field header">{{header.dateTime}}</div>
+                            <div class="field header">{{header.user}}</div>
+                            <div class="field header">{{header.examType}}</div>
+                            <div class="field header">
+                                <button class="header" mat-icon-button [matMenuTriggerFor]="menu">
+                                  <mat-icon>more_vert</mat-icon>
+                                </button>
+                                  <mat-menu #menu="matMenu">
+                                    <button (click)="deleteStudent(header)" mat-menu-item>
+                                      <mat-icon>delete</mat-icon>
+                                      <span>delete</span>
+                                    </button>
+                                    <button (click)="clickOnRecord(header)" mat-menu-item>
+                                      <mat-icon>update</mat-icon>
+                                      <span>update</span>
+                                    </button>
+                                  </mat-menu>
+                            </div>
+                          </div>
+                        <mat-divider></mat-divider>
+                    </div>
+                  <div  class="full" *ngFor="let table of allTableDetails">
+                      <div class="record">
+                          <div class="field" >
+                              <mat-checkbox class="checkbox" color="primary"></mat-checkbox>
+                          </div>
+                          <div (click)="clickOnRecord(table)" class="field">{{table.questionNo}}</div>
+                          <div (click)="clickOnRecord(table)" class="field">{{table.dateTime}}</div>
+                          <div (click)="clickOnRecord(table)" class="field">{{table.user}}</div>
+                          <div (click)="clickOnRecord(table)" class="field">{{table.examType}}</div>
+                          <div class="field">
+                              <button  mat-icon-button [matMenuTriggerFor]="menu">
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                                <mat-menu #menu="matMenu">
+                                  <button (click)="deleteStudent(table)" mat-menu-item>
+                                    <mat-icon>delete</mat-icon>
+                                    <span>delete</span>
+                                  </button>
+                                  <button (click)="clickOnRecord(table)" mat-menu-item>
+                                    <mat-icon>update</mat-icon>
+                                    <span>update</span>
+                                  </button>
+                                </mat-menu>
+                          </div>
+                        </div>
+                      <mat-divider></mat-divider>
+                  </div>
+               </mat-card>
+            </div>
+          </div>
+          <div class="row full-width top-20">
+            <div class="col-3">
+              <mat-card class="checkbox-section">
+                <div class="full-width">
+                  <mat-checkbox class="checkbox" color="primary">Question Level</mat-checkbox>
+                </div>
+                <div class="full-width">
+                    <mat-checkbox class="checkbox" color="primary">Previous Year</mat-checkbox>
+                </div>
+                <div class="full-width">
+                    <mat-checkbox class="checkbox" color="primary">Master Copy</mat-checkbox>
+                  </div>
+                <div class="full-width">
+                  <mat-checkbox class="checkbox" color="primary">Add Watermark</mat-checkbox>
+                </div>
+                <div class="each-step upload-photo">
+                <div style="position: relative;" >
+                    <input class="input-file" id="file" type="file">
+                    <div class="upload-button center">
+                      Select docs file for upload
+                    </div>
+                </div>
+                </div> 
+                <div>
+                  <button class="print-button full-width" mat-button>Upload</button>
+                </div>
+              </mat-card>
+            </div>
+            <div class="col-9">
+              <!-- <div class="pdf-section" style="overflow: auto; height: 70%">
+                <pdf-viewer class="" style="margin-left:-20px !important; height: 100%;" [src]="docxSrc" 
+                    [render-text]="true"
+                    style="display: block;"
+                    [show-all]="true"
+                ></pdf-viewer>
+              </div> -->
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

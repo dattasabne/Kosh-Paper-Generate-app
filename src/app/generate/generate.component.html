@@ -1,0 +1,173 @@
+<div class="main-div">
+  <div class="row">
+      <div class="col-12">
+        <mat-tab-group>
+          <mat-tab label="Random Generate">
+            <div class="row form-background">
+              <div class="col-3">
+                  <mat-card  class="stepper select-items full-width">
+                    <div class="each-step full-width">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Select Exam Pattern</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option value="JEE">JEE</mat-option>
+                          <mat-option value="NEET">NEET</mat-option>
+                          <mat-option value="MH-CET">MHTCET</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Select Standard</mat-label>
+                        <mat-select [(value)]="selected">
+                         <mat-option value="option1">11th</mat-option>
+                          <mat-option value="option2">12th</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Test Type</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option value="option1">Chaperwise</mat-option>
+                          <mat-option value="option2">Syllabus wise</mat-option>
+                          <mat-option value="option3">Final Test</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Select Subjects</mat-label>
+                        <mat-select>
+                          <mat-option value="option1">JEE/PCM</mat-option>
+                          <mat-option value="option2">NEET/PCB</mat-option>
+                          <mat-option value="option3">MHTCET/PCMB</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                </mat-card>
+              </div>
+              <div class="col-9">
+                <mat-card class="record-container">
+                  <div class="full" *ngFor="let header of allHeaders">
+                      <div class="record">
+                         <div class="field header colspan-2">{{header.chapterNames}}</div>
+                          <div class="field header">{{header.availableQuestion}}</div>
+                          <div class="field header">{{header.requiredQuestion}}</div>
+                          <div class="field header">{{header.total}}</div>
+                        </div>
+                      <mat-divider></mat-divider>
+                  </div>
+                <div  class="full" *ngFor="let table of allTableDetails">
+                    <div class="record">
+                        <div class="field colspan-2">{{table.chapterNames}}</div>
+                        <div class="field">500</div>
+                        <div class="field">
+                          <input class="required-question" type="text" placeholder="200">
+                        </div>
+                        <div class="field">200</div>
+                    </div>
+                    <mat-divider></mat-divider>
+                </div>
+             </mat-card>
+              <div class="action generate-button">
+                <button (click)="clickOnRecord()" class="generate" mat-raised-button>Generate</button>
+              </div>
+          </div>
+        </div>
+        </mat-tab>
+          <mat-tab label="Manual Generate">
+            <div class="row form-background">
+              <div class="col-3">
+                  <mat-card  class="stepper select-items full-width">
+                    <div class="each-step full-width">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Select Exam Pattern</mat-label>
+                        <mat-select [(value)]="selected">
+                          <mat-option value="JEE">JEE</mat-option>
+                          <mat-option value="NEET">NEET</mat-option>
+                          <mat-option value="MH-CET">MHTCET</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Select Standard</mat-label>
+                        <mat-select [(value)]="selected">
+                         <mat-option value="option1">11th</mat-option>
+                          <mat-option value="option2">12th</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                        <mat-label>Test Type</mat-label>
+                        <mat-select  [(value)]="selected">
+                          <mat-option value="option1">Chaperwise</mat-option>
+                          <mat-option value="option2">Syllabus wise</mat-option>
+                          <mat-option value="option3">Final Test</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                          <mat-label>Select Subjects</mat-label>
+                          <mat-select [(value)]="selected">
+                            <mat-option value="option1">JEE/PCM</mat-option>
+                            <mat-option value="option2">NEET/PCB</mat-option>
+                            <mat-option value="option3">MHTCET/PCMB</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="each-step">
+                      <mat-form-field class="input-text full-width">
+                          <mat-label>Select Chapter Name</mat-label>
+                          <mat-select [(value)]="selected">
+                            <mat-option value="option1">Chapter1</mat-option>
+                            <mat-option value="option2">Chapter2</mat-option>
+                            <mat-option value="option3">Chapter3</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                    </div>
+                </mat-card>
+              </div>
+              <div class="col-9">
+                <mat-card class="record-container">
+                  <div class="full" *ngFor="let header of allHeaders">
+                      <div class="record">
+                         <div class="field header colspan-2">{{header.chapterNames}}</div>
+                          <div class="field header">{{header.availableQuestion}}</div>
+                          <div class="field header">{{header.requiredQuestion}}</div>
+                          <div class="field header">{{header.total}}</div>
+                        </div>
+                      <mat-divider></mat-divider>
+                  </div>
+                <div  class="full" *ngFor="let table of allTableDetails">
+                    <div class="record">
+                        <div class="field colspan-2">{{table.chapterNames}}</div>
+                        <div class="field">600</div>
+                        <div class="field">
+                          <input class="required-question" type="text" placeholder="210">
+                        </div>
+                        <div class="field">210</div>
+                    </div>
+                    <mat-divider></mat-divider>
+                </div>
+             </mat-card>
+                <div class="action generate-button">
+                  <button (click)="clickOnRecord()" class="generate" mat-raised-button>Generate</button>
+                </div>
+              </div>
+            </div>
+          </mat-tab>
+         <mat-tab label="Optional Generate">
+            Optional Generate
+         </mat-tab>
+        </mat-tab-group>
+      </div>
+  </div>
+</div>
+
+
+
+

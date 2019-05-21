@@ -1,1 +1,184 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~font-awesome/css/font-awesome.css';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+[class*="row"]{
+    margin: 0px !important;
+}
+.green-circle{
+    background-color: green;
+}
+.red-circle{
+    background-color: red;
+}
+.round-circle , .dashboad-circle{
+    min-height: 30px;
+    min-width:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+    position: absolute;
+    right: 5px;
+    bottom: 40%;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    
+}
+.border{
+    border: 1px solid red;
+}
+.showcase{
+    min-height: 150px;
+    width: 100%;
+    background:linear-gradient( to right,skyblue,black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    position: relative;
+}
+
+.banner-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message-small{
+    font-size: 1em;
+}
+.message-big{
+    font-size: 3em;
+}
+.center{
+    text-align: center;
+}
+.message , .message-small{
+    font-weight: bold;
+   
+    text-transform: capitalize;
+    font-style: italic;
+    color: white;
+}
+.toggle div{
+    height: 4px;
+    width:30px;
+    background: white;
+    margin-top: 3px;
+}
+
+.sidebar{
+    width:0px;
+    height: 88vh;
+    top: 0;
+    left: 0;
+    position: absolute !important;
+    transition: 0.5s !important;
+    z-index: 99;
+    background: #fff;
+    overflow: hidden;
+    padding: 0px !important;
+}
+
+.active-toggle{
+    width: 300px;
+    overflow: auto;
+    border: 1px solid gray;
+}
+.main{
+    height: 97vh;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.class-header{
+    background: linear-gradient(to right,black, lightseagreen);
+    flex-basis: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1em;
+}
+.classes:hover{
+    background: lightslategray;
+    color:white;
+    
+}
+.classes{
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    transition: 0.5s;
+    
+    
+}
+.class-profile-pic{
+    height: 40px;
+    width:40px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin: 5px;
+}
+.class-names{
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: capitalize;
+}
+
+  body,html{
+      overflow-x: hidden;
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+      
+  }
+  .no-gutter{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.full-height-width{
+    height: 100% !important;
+    width: 100% !important;
+}
+.full-height{
+    height: 100% !important;
+}
+.full-width {
+    text-transform: capitalize;
+}
+.compusory {
+    color: red;
+    font-size: 1.2rem;
+    left: -13px !important;
+    margin-top: 7px !important;
+    position: absolute;
+}
+.input-div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    box-sizing: border-box;
+}
+.template-container{
+    overflow: auto !important;
+    height: 100%;
+
+}

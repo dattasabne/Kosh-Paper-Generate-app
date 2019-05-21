@@ -1,0 +1,122 @@
+ <div class="main-div"> 
+<nav class="navbar navbar-expand-lg navbar-dark custom-bg">
+  <button class="navbar-toggler" type="button"
+            (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+  <div class="collapse navbar-collapse"
+         [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Applications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Read MCQ's</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Practice MCQ's</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Question Paper</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Master</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Transaction</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Window</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="showcase">
+    <mat-card style="margin:2em;" id="class-logo">
+        <img src="assets/images/image4.jpg" alt="">
+    </mat-card>
+    <mat-card style="margin:2em;">
+        <img src="assets/images/image1.jpg" alt="">
+    </mat-card>
+</div>
+<div class="options-div" id="options">
+    <div class="row jumbotron">
+        <mat-card class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 section-container">
+           <div>
+                <h3>QUESTION PAPER</h3> 
+                <mat-card routerLink="/generate" class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-bolt" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">GENERATE</h4>
+                        <p>Random Selection</p>
+                    </div>   
+                </mat-card> 
+                <mat-card routerLink="/upload-papers" class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">UPLOAD</h4>
+                        <p>Manually Selection In Notepad</p>
+                    </div>
+                </mat-card>
+                <mat-card class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-print" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">RE-PRINT/EDIT</h4>
+                        <p>Previously Generated/Uploaded</p>
+                    </div>
+                </mat-card>  
+            </div> 
+        </mat-card>
+        <mat-card class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 section-container">
+            <div>
+                <h3>STUDENT</h3> 
+                <mat-card class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">STUDENT INFORMATION</h4>
+                    </div>
+                </mat-card> 
+                <mat-card class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">STUDENTS ASSIGNMENT</h4>
+                    </div>    
+                </mat-card>
+                <mat-card class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-print" style="margin-right:10px;" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">STUDENT/EMAIL/SMS</h4>
+                    </div>
+                </mat-card>  
+            </div> 
+        </mat-card>
+        <mat-card class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 section-container">
+            <div>
+                <h3>MASTERS</h3> 
+                <mat-card class="row section-div border">
+                    <div class="col-2">
+                        <i class="fa fa-bolt" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="count margin-topp">SET DEFAULTS</h4>
+                        <p>Default Setting To Print Question Paper</p>
+                    </div>
+                </mat-card>
+            </div> 
+        </mat-card>
+      </div>
+    </div>
+</div>

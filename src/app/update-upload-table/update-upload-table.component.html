@@ -1,0 +1,182 @@
+<section class="main-div">
+  <div class="class-banner">
+      <img src="" alt="">
+      <div class="class-name">
+        <div class="center-item edit-container">
+          <span>Inception Technology </span>
+          <span class="icon"> 
+              <mat-icon>edit</mat-icon>
+            </span>
+        </div>
+      </div>
+      <div (click)="close()" class="close"><mat-icon>close</mat-icon></div>
+  </div>
+  <div class="class-body">
+      <div class="row data-row ">
+         <div class="col-3 no-gutter ">
+           <mat-card class="class-data">
+                <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>
+                    <mat-form-field class="full-width">
+                      <input [formControl]="className"  matInput placeholder="class name">
+                      <mat-error>Please enter class name</mat-error>
+                    </mat-form-field>
+                  </div> 
+                 </div>
+                 <div>
+                  <mat-form-field class="full-width">
+                    <input [formControl]="classType" matInput placeholder="class type">
+                    <mat-error>Please enter class type</mat-error>
+                  </mat-form-field>
+                 </div>
+                 <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>  
+                    <mat-form-field class="full-width">
+                      <input [formControl]="totolStudents" matInput placeholder="total students">
+                      <mat-error>Please enter total students</mat-error>
+                    </mat-form-field>
+                  </div>  
+                 </div>
+                 <div>
+                  <mat-form-field class="full-width">
+                    <mat-label>eshtablishment year</mat-label>
+                    <mat-select [formControl]="establishmentYear" [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                    <mat-error>Please select the eshtablishment year</mat-error>
+                  </mat-form-field>
+                 </div>
+          </mat-card>
+         </div>
+         <div class="col-3 no-gutter">
+            <mat-card class="class-data">
+                <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>    
+                    <mat-form-field class="full-width">
+                      <input [formControl]="mobileNo" matInput placeholder="mobile no">
+                      <mat-error>Please enter mobile no</mat-error>
+                    </mat-form-field>
+                  </div>  
+                 </div>
+                 <div>
+                  <mat-form-field class="full-width">
+                    <input [formControl]="alternateNo" matInput placeholder="alternate mobile no">
+                    <mat-error>Please enter alternate mobile no</mat-error>
+                  </mat-form-field>
+                 </div>
+                 <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>     
+                    <mat-form-field class="full-width">
+                      <input [formControl]="emailId" matInput placeholder="email id">
+                      <mat-error>Please enter email id</mat-error>
+                    </mat-form-field>
+                  </div>  
+                 </div>
+                 <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>       
+                    <mat-form-field class="full-width">
+                      <input [formControl]="address" matInput placeholder="address">
+                      <mat-error>Please enter the address</mat-error>
+                    </mat-form-field>
+                 </div>
+                </div> 
+            </mat-card>
+         </div>
+
+         <div class="col-3 no-gutter"> 
+            <mat-card class="class-data">
+                <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>   
+                    <mat-form-field class="full-width">
+                      <mat-label>Select Branch</mat-label>
+                      <mat-select [formControl]="branch" [(value)]="selected">
+                        <mat-option>None</mat-option>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                      </mat-select>
+                      <mat-error>Please select the branch</mat-error>
+                    </mat-form-field>
+                   </div> 
+                 </div>
+                 <div>
+                  <mat-form-field class="full-width">
+                    <mat-label>Select Sub Branch</mat-label>
+                    <mat-select  [formControl]="subBranch" [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                    <mat-error>Please select the sub branch</mat-error>
+                  </mat-form-field>
+                 </div>
+                 <div>
+                    <mat-form-field class="full-width">
+                      <input [formControl]="certified" matInput placeholder="certified">
+                      <mat-error>Please enter the certified</mat-error>
+                    </mat-form-field>
+                 </div>
+                 <div>
+                    <mat-form-field class="full-width">
+                      <input [formControl]="validity" matInput placeholder="Validity">
+                      <mat-error>Please enter the validity</mat-error>
+                    </mat-form-field>
+                 </div>
+          </mat-card>
+         </div>
+         <div class="col-3 no-gutter full-height"> 
+          <mat-card class="class-data">
+                <div>
+                  <div class="input-div">
+                  <span class="compusory">*</span>   
+                  <mat-form-field class="full-width">
+                    <mat-label>Source of reference</mat-label>
+                    <mat-select [formControl]="sourceOfReference" [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                    <mat-error>Please select the source of reference</mat-error>
+                  </mat-form-field>
+                  </div> 
+                </div>
+                <div>
+                  <div class="input-div">
+                    <span class="compusory">*</span>   
+                    <mat-form-field class="full-width">
+                      <mat-label>Sales Person</mat-label>
+                      <mat-select [formControl]="salesPerson" [(value)]="selected">
+                        <mat-option>None</mat-option>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                      </mat-select>
+                      <mat-error>Please select the sales person</mat-error>
+                    </mat-form-field>
+                  </div>  
+                </div>
+                <div>
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="Remark">
+                  </mat-form-field>
+                </div>
+           </mat-card>
+         </div>
+      </div>
+  </div>
+  <div class="action">
+      <button (click)="updateClass()" class="update-button" mat-raised-button>Update</button>
+      <button (click)="deleteClass()" class="delete-button" mat-raised-button>Delete</button>
+  </div>
+</section>
