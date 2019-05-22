@@ -1,9 +1,9 @@
-<div class="main-div">
+<div class="main-div content-body">
   <div class="row">
       <div class="col-12">
         <mat-tab-group>
           <mat-tab label="Random Generate">
-            <div class="row form-background">
+            <div style="padding: 10px 0px !important;" class="row  margin-top">         
               <div class="col-3">
                   <mat-card  class="stepper select-items full-width">
                     <div class="each-step full-width">
@@ -48,7 +48,7 @@
                 </mat-card>
               </div>
               <div class="col-9">
-                <mat-card class="record-container">
+                <mat-card class="record-container margin-top">
                   <div class="full" *ngFor="let header of allHeaders">
                       <div class="record">
                          <div class="field header colspan-2">{{header.chapterNames}}</div>
@@ -77,7 +77,7 @@
         </div>
         </mat-tab>
           <mat-tab label="Manual Generate">
-            <div class="row form-background">
+            <div style="padding: 10px 0px !important;" class="row margin-top">
               <div class="col-3">
                   <mat-card  class="stepper select-items full-width">
                     <div class="each-step full-width">
@@ -161,7 +161,7 @@
             </div>
           </mat-tab>
          <mat-tab label="Optional Generate">
-            Optional Generate
+            <div style="padding: 10px 0px !important;" class=" margin-top">Optional Generate</div>
          </mat-tab>
         </mat-tab-group>
       </div>

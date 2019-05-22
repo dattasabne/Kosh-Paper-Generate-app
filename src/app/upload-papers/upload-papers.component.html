@@ -1,4 +1,4 @@
-<div class="main-div form-background">
+<div class="main-div content-body">
   <div class="row full-height">
       <div class="col-12 full-height">
         <mat-tab-group class="full-height" [dynamicHeight]="false">
@@ -49,9 +49,9 @@
                         </mat-form-field>
                     </div>
                 </mat-card>
-              </div>
-              <div class="col-9 custom-height">
-                <mat-card class="record-container">
+              </div> 
+              <div class="col-9">
+                <mat-card class="record-container custom-height">
                     <div class="full" *ngFor="let header of allHeaders">
                         <div class="record">
                             <div class="field header" >
@@ -124,7 +124,7 @@
                 <div class="full-width">
                   <mat-checkbox class="checkbox" color="primary">Add Watermark</mat-checkbox>
                 </div>
-                <div class="each-step upload-photo">
+                <div class="each-step full-width upload-photo">
                 <div style="position: relative;" >
                     <input class="input-file" id="file" type="file">
                     <div class="upload-button center">

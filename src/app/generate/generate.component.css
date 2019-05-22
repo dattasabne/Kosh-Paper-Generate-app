@@ -254,6 +254,9 @@ md-icon{
 table {
     width: 100%;
   }
+  .content-body {
+    background-image: linear-gradient(to right,#ECF1EF , #C1CDC1);
+  }
   
 /* @media only screen and (max-width: 650px) {
 .action button

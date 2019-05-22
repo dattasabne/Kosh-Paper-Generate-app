@@ -83,7 +83,10 @@
     overflow: hidden;
     padding: 0px !important;
 }
-
+.section-container {
+    background: #EEEEE0;
+    height: 100%;
+  }
 .active-toggle{
     width: 300px;
     overflow: auto;

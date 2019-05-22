@@ -47,7 +47,7 @@
 } */
 .input-file , .upload-button{
     height: 40px;
-    width:252px;
+    width:295px;
     cursor: pointer;
 }
 .header {
@@ -147,7 +147,7 @@
     transition: all 0.5s;
 }
 .select-fields {
-    max-height: 50% !important;
+    max-height: 60% !important;
     margin-bottom: 30px !important;
 }
 /* .docs-viewer {
@@ -227,6 +227,10 @@ md-icon{
 .border{
     border: 1px solid red !important;
 }
+.content-body {
+    background-image: linear-gradient(to right,#ECF1EF , #C1CDC1);
+  }
+
 .action button {
     width:150px;
     margin:0px;
@@ -236,7 +240,7 @@ md-icon{
     margin: 0px 2px;
 }
 .custom-height {
-    max-height: 50% !important;
+    max-height: 60% !important;
     box-sizing: border-box;
 }
 table {

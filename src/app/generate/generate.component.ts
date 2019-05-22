@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { GenerateTable } from '../generate-table-entity/generate-table-entity';
 import { DialogService } from '../DialogeService/dialoge.service';
 import { UploadPapersComponent } from '../upload-papers/upload-papers.component';
+import { UpdateUploadTableComponent } from '../update-upload-table/update-upload-table.component';
 
 @Component({
   selector: 'app-generate',
@@ -71,7 +72,7 @@ isLinear = false;
   }
   public clickOnRecord(table:GenerateTable):void {
     this.dialog.updateAndDeletepopup(
-      UploadPapersComponent , 
+      UpdateUploadTableComponent, 
       table,
       this.preview.bind(this),
       this.upload.bind(this)

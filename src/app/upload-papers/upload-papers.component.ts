@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadTable } from '../upload-table-entity/upload-table';
-import { GenerateComponent } from '../generate/generate.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { DialogService } from '../DialogeService/dialoge.service';
 import { UpdateUploadTableComponent } from '../update-upload-table/update-upload-table.component';
