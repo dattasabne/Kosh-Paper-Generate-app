@@ -11,8 +11,6 @@ import { UpdateUploadTableComponent } from '../update-upload-table/update-upload
 })
 export class UploadPapersComponent implements OnInit {
 
-  
-
 selected:any;
 isLinear = false;
 firstFormGroup: FormGroup;
@@ -76,7 +74,7 @@ public getAllStudents():void {
   table.questionNo = "10";
   table.dateTime = "03-09-1996";
   table.user= "Lakhan";
-  table.examType = "JEE";
+  table.examType = "JEE"; 
   this.allTableDetails.push(table);
 }
 public deleteStudent(table:UploadTable):void{
